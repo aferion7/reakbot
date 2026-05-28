@@ -4,7 +4,7 @@ from fastapi import FastAPI, Request
 from telebot import TeleBot
 from telebot.types import Update
 from dotenv import load_dotenv
-app = FastAPI()
+@bot= FastAPI()
 # .env faylini yuklash (Lokal ishlash uchun)
 load_dotenv()
 
@@ -15,7 +15,6 @@ EMOJI_LIST = [e.strip() for e in os.getenv("EMOJI_LIST", "👍,❤️,🔥,👏"
 
 bot = TeleBot(TOKEN)
 app = FastAPI()
-
 # Render to'xtab qolmasligi uchun "Health Check" (Sog'lomlik testi) havolasi
 @app.get("/")
 def read_root():
