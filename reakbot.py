@@ -4,7 +4,7 @@ from fastapi import FastAPI, Request
 from telebot import TeleBot
 from telebot.types import Update
 from dotenv import load_dotenv
-@bot = FastAPI()
+@bot.channel_post_handler()  # ✅ TO'G'RI
 # .env faylini yuklash (Lokal ishlash uchun)
 load_dotenv()
 
